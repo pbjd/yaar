@@ -16,11 +16,10 @@ function simulateQueries() {
         // alignment start (reference)
         var ars = Math.floor((Math.random() * (max-min)) + min);
         var qlen = Math.floor((Math.random() * (maxQlen-minQlen)) + minQlen); 
-
         // alignment start (query)
         var maxQstart = qlen - min;
         var aqs = Math.floor(Math.random() * maxQstart);
-        var maxAlen = rlen-ars;
+        var maxAlen = Math.min(rlen-ars, ars+(qlen-aqs));
         var alen = Math.floor((Math.random() * (maxAlen-min)) + min);
         queries.push({rlen: rlen, qlen: qlen, alen: alen, ars: ars, aqs: aqs});
     }
@@ -34,14 +33,14 @@ function renderRef(canvas) {
 
     var width = canvas.width - (pad * 2);
 
-    ctx.fillRect(pad,pad,width,10);
-    ctx.strokeRect(pad,pad,width,10);
+    ctx.fillRect(pad,pad,width,5);
+    ctx.strokeRect(pad,pad,width,5);
 }
 
 function renderQueries(canvas) {
     var ctx = canvas.getContext('2d');
     var w = canvas.width - (pad * 2);
-    var y = 25;
+    var y = 20;
     var scale = w / rlen;
     
     for (var i = 0; i < queries.length; i++) {
