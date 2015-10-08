@@ -1,0 +1,20 @@
+var queries = [
+{rlen:1669,qlen:1471,alen:1212,ars:449,aqs:434},
+{rlen:1669,qlen:518,alen:404,ars:315,aqs:16},
+{rlen:1669,qlen:1288,alen:420,ars:802,aqs:0},
+{rlen:1669,qlen:881,alen:557,ars:676,aqs:1},
+{rlen:1669,qlen:1102,alen:387,ars:846,aqs:14},
+{rlen:1669,qlen:1739,alen:420,ars:447,aqs:1354},
+{rlen:1669,qlen:687,alen:422,ars:798,aqs:1},
+{rlen:1669,qlen:1669,alen:1669,ars:0,aqs:0},
+{rlen:1669,qlen:1104,alen:717,ars:639,aqs:3},
+{rlen:1669,qlen:1403,alen:483,ars:669,aqs:9},
+{rlen:1669,qlen:1610,alen:288,ars:945,aqs:274},
+{rlen:1669,qlen:623,alen:573,ars:155,aqs:0},
+{rlen:1669,qlen:1464,alen:359,ars:365,aqs:1138},
+{rlen:1669,qlen:1139,alen:524,ars:696,aqs:0},
+{rlen:1669,qlen:1004,alen:516,ars:945,aqs:559},
+{rlen:1669,qlen:1314,alen:685,ars:130,aqs:0},
+{rlen:1669,qlen:1473,alen:1037,ars:164,aqs:134},
+{rlen:1669,qlen:948,alen:595,ars:638,aqs:0}
+];

@@ -1,8 +1,8 @@
-var rlen = 1e4;      // reference length
+var rlen = 1669;      // reference length
 var pad = 10;        // canvas padding
 var minOvl = 100;    // minimum overlap (in bases)
-var numQueries = 20; // number of queries to generate
-var queries = [];    // query locations
+//var numQueries = 20; // number of queries to generate
+//var queries = [];    // query locations
 
 function simulateQueries() {
     // anchor range position for query
@@ -23,7 +23,6 @@ function simulateQueries() {
         var alen = Math.floor((Math.random() * (maxAlen-min)) + min);
         queries.push({rlen: rlen, qlen: qlen, alen: alen, ars: ars, aqs: aqs});
     }
-    queries.sort(function(a,b){return a.ars-b.ars});
 }
 
 function renderRef(canvas) {
@@ -41,8 +40,8 @@ function renderQueries(canvas) {
     var ctx = canvas.getContext('2d');
     var w = canvas.width - (pad * 2);
     var y = 20;
-    var scale = w / rlen;
-    
+    var scale = w / queries[0].rlen;
+    queries.sort(function(a,b){return a.ars-b.ars});
     for (var i = 0; i < queries.length; i++) {
         var q = queries[i];
         ctx.setLineDash([5,5]);
@@ -61,6 +60,6 @@ function renderQueries(canvas) {
 function render() {
     var canvas = document.getElementById('peek');
     renderRef(canvas);
-    simulateQueries();
+    //simulateQueries();
     renderQueries(canvas);
 }
